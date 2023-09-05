@@ -27,6 +27,7 @@ Methods - repr method to display object as "date || credit || debit || balance"
 
 Account class
 Properties - "transactions" array containing list of Transaction objects
+           - balance (float) - this will track the account balance and the amount will be updated when a deposit or withdrawal is made
 Methods - Deposit - adds deposit Transaction object to transactions array
         - Withdraw - adds credit Transaction object to transactions array
         - ViewStatement - displays transactions array in required format
