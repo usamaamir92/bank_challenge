@@ -45,13 +45,16 @@ Clone repository to local:
 
 `git clone https://github.com/usamaamir92/bank_challenge.git`
 
+
 Change into bank_challenge directory:
 
 `cd bank_challenge`
 
+
 Start Python:
 
 `python3`
+
 
 Import modules:
 
@@ -59,45 +62,54 @@ Import modules:
 
 `from lib.transaction import *`
 
+
 To create an account, provide an account name. E.g.:
 
 `my_account = Account()`
+
 
 To deposit:
 
 `my_account.deposit(deposit_amount)`
 
+
 To withdraw:
 
 `my_account.withdraw(withdrawal_amount)`
+
 
 To view statement:
 
 `my_account.view_statement()`
 
 
+
 ### To run tests:
 
 After cloning repository and changing into bank_challenge directory:
+
 
 Install pipenv if not already installed:
 
 `pip install pipenv`
 
+
 Install project dependencies and create virtual environment:
 
 `pipenv install`
 
+
 Activate virtual environment:
 
 `pipenv shell`
+
 
 Run pytest:
 
 `pytest`
 
 
+
 ## Screenshot
 
-<img src="image.png" alt="Alt text" width="400" />
-<!-- ![Alt text](image.png) -->
+<img src="image.png" alt="Alt text" width="300" />
