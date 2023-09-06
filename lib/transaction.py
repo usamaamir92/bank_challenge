@@ -6,8 +6,8 @@ class Transaction():
         self.closing_balance = float(closing_balance)
 
 
-#Function to convert amount input to 2 deciaml places if int or float, else return an empty string
-# to allow correct format in repr method
+    #Function to convert amount input to 2 deciaml places if int or float, else return an empty string
+    # to allow correct format in repr method
     def format_amount(self, amount):
         if amount is not None:
             return "{:.2f}".format(amount)

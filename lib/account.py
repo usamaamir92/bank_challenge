@@ -6,8 +6,10 @@ class Account():
         self.transactions = []
         self.balance = 0
 
+    # Function to get current date and format to dd/mm/yyyy
     def get_current_date(self):
         return datetime.now().strftime("%d/%m/%Y")
+
 
     def deposit(self, amount):
         if type(amount) != int and type(amount) != float:
