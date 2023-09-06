@@ -5,26 +5,30 @@ class Account():
     def __init__(self):
         self.transactions = []
         self.balance = 0
-        self.date = datetime.now().strftime("%d/%m/%Y")
 
+    def get_current_date(self):
+        return datetime.now().strftime("%d/%m/%Y")
 
     def deposit(self, amount):
+        if type(amount) != int and type(amount) != float:
+            raise Exception("Amount must be a number")
         self.balance += amount
-        transaction = Transaction(datetime.now().strftime("%d/%m/%Y"), amount, "", self.balance)
+        transaction = Transaction(self.get_current_date(), amount, None, self.balance)
         self.transactions.insert(0, transaction)
 
 
     def withdraw(self,amount):
+        if type(amount) != int and type(amount) != float:
+            raise Exception("Amount must be a number")
         self.balance -= amount
-        transaction = Transaction(datetime.now().strftime("%d/%m/%Y"), "", amount, self.balance)
+        transaction = Transaction(self.get_current_date(), None, amount, self.balance)
         self.transactions.insert(0, transaction)
 
 
     def view_statement(self):
         statement = "date || credit || debit || balance\n"
         for transaction in self.transactions:
-            statement += f"{str(transaction)}\n"
-        print(statement)
+            statement += f"{transaction}\n"
         return statement
 
     
