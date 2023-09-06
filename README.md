@@ -1,4 +1,4 @@
-# bank_challenge
+## bank_challenge
 
 This app allows a user to create a bank account. The account keeps a list of transactions and the balance.
 
@@ -7,13 +7,13 @@ A user can then either deposit or withdraw amounts into their account.
 A user can also view their statement which will show all transactions in reverse chronological order with the transaction date and closing balance after each transaction.
 
 
-# Technologies and Design Principles
+## Technologies and Design Principles
 
 This app was built using Python 3. Python was chosen due to it's simplicity and it was appropriate for this app given it's required functionality.
 
 SOLID principles were kept in mind and TDD was used throughout. Testing framework used was Pytest.
 
-# Code Structure
+## Code Structure
 
 There are two classes: Account and Transaction.
 
@@ -26,7 +26,7 @@ The account class contains deposit and withdraw functions. When these are called
 The account class also contains a view_statement function which displays the transactions list containing a list of transaction objects, each with date, credit amount, debit amount and closing balance.
 
 
-# Design approach
+## Design approach
 
 I decided to have "Account" as a class as it contains information for multiple states i.e. all transactions and balance.
 
@@ -37,53 +37,54 @@ I also considered having the deposit and withdraw methods in the Transaction cla
 Possible future extensions could include adding "id" and "transaction_type" properties to the transaction class to enable further functionality with transactions such as undo a transaction or return only deposits or withdrawals.
 
 
-# Running the app
+## Running the app
 
-## To run locally:
+### To run locally:
 
 Clone repository to local:
-'git clone https://github.com/usamaamir92/bank_challenge.git'
+`git clone https://github.com/usamaamir92/bank_challenge.git`
 
 Change into bank_challenge directory:
-'cd bank_challenge'
+`cd bank_challenge`
 
 Start Python:
-'python3'
+`python3`
 
 Import modules:
-'from lib.account import *'
-'from lib.transaction import *'
+`from lib.account import *`
+`from lib.transaction import *`
 
 To create an account, provide an account name. E.g.:
-'my_account = Account()'
+`my_account = Account()`
 
 To deposit:
-'my_account.deposit(deposit_amount)'
+`my_account.deposit(deposit_amount)`
 
 To withdraw:
-'my_account.withdraw(withdrawal_amount)'
+`my_account.withdraw(withdrawal_amount)`
 
 To view statement:
-'my_account.view_statement()'
+`my_account.view_statement()`
 
 
-## To run tests:
+### To run tests:
 
 After cloning repository and changing into bank_challenge directory:
 
 Install pipenv if not already installed:
-'pip install pipenv'
+`pip install pipenv`
 
 Install project dependencies and create virtual environment:
-'pipenv install'
+`pipenv install`
 
 Activate virtual environment:
-'pipenv shell'
+`pipenv shell`
 
 Run pytest:
-'pytest'
+`pytest`
 
 
-# Screenshot
+## Screenshot
 
-![Alt text](image.png)
+<img src="image.png" alt="Alt text" width="400" />
+<!-- ![Alt text](image.png) -->
