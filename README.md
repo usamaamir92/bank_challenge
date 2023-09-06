@@ -112,4 +112,4 @@ Run pytest:
 
 ## Screenshot
 
-<img src="image.png" alt="Alt text" width="300" />
+<img src="image.png" alt="Alt text" width="350" />
